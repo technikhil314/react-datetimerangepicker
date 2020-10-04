@@ -8,8 +8,8 @@
     "start": "webpack-dev-server",
     "test": "jest",
     "lint": "eslint --ext .ts,.tsx ./src/ --fix",
-    "storybook": "start-storybook -p 6006 --debug-webpack",
-    "build-storybook": "build-storybook --debug-webpack"
+    "sb": "start-storybook -p 6006",
+    "bsb": "build-storybook"
   },
   "repository": {
     "type": "git",
@@ -35,7 +35,9 @@
   "dependencies": {
     "@babel/core": "^7.11.6",
     "@emotion/core": "^10.0.35",
+    "@storybook/addons": "^6.0.25",
     "@storybook/cli": "^6.0.25",
+    "@storybook/theming": "^6.0.25",
     "@testing-library/dom": "^7.24.3",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.0.4",

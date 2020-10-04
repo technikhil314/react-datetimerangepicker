@@ -80,7 +80,7 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['src/**/*'],
+      files: ['**/*'],
       rules: {
         'react/jsx-filename-extension': [
           'error',
