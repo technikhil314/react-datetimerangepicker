@@ -92,7 +92,6 @@ module.exports = {
     },
   ],
   ignorePatterns: [
-    'stories/**/*',
     'node_modules/**/*',
     'dist/**/*',
     'public/**/*',
