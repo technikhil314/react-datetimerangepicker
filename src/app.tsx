@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-interface IProps {
+export interface AppProps {
   name: string;
 }
 
-export const App: React.FunctionComponent<IProps> = function ({ name }) {
+export const App: React.FunctionComponent<AppProps> = function ({ name }) {
   return <h1 data-testid="app">Hello {name}</h1>;
 };
 
