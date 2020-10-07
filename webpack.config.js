@@ -64,6 +64,29 @@ module.exports = {
           "sass-loader",
         ],
       },
+      {
+        test: /\.(png|jpe?g|gif|svg|webp|ico)$/i,
+        use: [
+          {
+            loader: "url-loader",
+            options: {
+              limit: 4096,
+              fallback: {
+                loader: "file-loader",
+                options: {
+                  outputPath: "images",
+                  name: (resourcePath) => {
+                    if (resourcePath.match(".(jpg|jpeg)")) {
+                      return "[contenthash].jpg";
+                    }
+                    return "[contenthash].[ext]";
+                  },
+                },
+              },
+            },
+          },
+        ],
+      },
     ],
   },
   devServer: {
