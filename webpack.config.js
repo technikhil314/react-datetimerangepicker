@@ -1,21 +1,27 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { createEmotionPlugin } = require("emotion-ts-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const devMode = process.env.WEBPACK_DEV_SERVER !== "production";
 
 function getPlugins() {
-  const plugins = [];
-  plugins.push(
+  const plugins = [
+    new MiniCssExtractPlugin({
+      filename: devMode ? "[name].css" : "[name].[hash].css",
+      chunkFilename: devMode ? "[id].css" : "[id].[hash].css",
+    }),
     new HtmlWebpackPlugin({
       template: __dirname + "/public/index.html",
       filename: "index.html",
       inject: true,
-    })
-  );
+    }),
+  ];
+  plugins.push();
   return plugins;
 }
 
 module.exports = {
   entry: "./src/index.tsx",
-  mode: process.env.WEBPACK_DEV_SERVER ? "development" : "production",
+  mode: devMode ? "development" : "production",
   output: {
     path: __dirname + "/dist",
     filename: "app.js",
@@ -43,6 +49,20 @@ module.exports = {
             ],
           }),
         },
+      },
+      {
+        test: /\.(sa|sc|c)ss$/,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              hmr: devMode,
+            },
+          },
+          "css-loader",
+          "postcss-loader",
+          "sass-loader",
+        ],
       },
     ],
   },
