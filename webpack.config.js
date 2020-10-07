@@ -30,7 +30,7 @@ module.exports = {
     extensions: [".ts", ".tsx", ".js"],
   },
   plugins: getPlugins(),
-  devtool: "source-map",
+  devtool: devMode ? "source-map" : "cheap-module-source-map",
   module: {
     rules: [
       {
