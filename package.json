@@ -4,8 +4,8 @@
   "description": "A accessible, touch friendly, themable, light weight date and time range picker for react",
   "main": "app.js",
   "scripts": {
-    "build": "webpack",
-    "start": "webpack-dev-server",
+    "build": "cross-env-shell NODE_ENV=production rimraf ./dist && webpack",
+    "start": "cross-env-shell NODE_ENV=development rimraf ./dist && webpack-dev-server",
     "test": "jest",
     "lint": "eslint --ext .ts,.tsx ./src/ --fix",
     "sb": "start-storybook -p 6006",
