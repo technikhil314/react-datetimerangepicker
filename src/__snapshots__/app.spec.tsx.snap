@@ -1,12 +1,59 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`shows the children when the checkbox is checked 1`] = `
+.emotion-5 {
+  padding: 32px;
+  background-color: hotpink;
+  font-size: 24px;
+  border-radius: 4px;
+}
+
+.emotion-0:hover {
+  color: var(--demo,#fff);
+}
+
 <div>
-  <h1
+  <div
     data-testid="app"
   >
-    Hello 
-    demo
-  </h1>
+    <div
+      class="emotion-5"
+    >
+      <h1
+        class="emotion-0"
+      >
+        1
+      </h1>
+      <h1
+        class="emotion-0"
+      >
+        2
+      </h1>
+      <h1
+        class="emotion-0"
+      >
+        3
+      </h1>
+      <h1
+        class="emotion-0"
+      >
+        4
+      </h1>
+      <h1
+        class="emotion-0"
+      >
+        5
+      </h1>
+    </div>
+    <img
+      src=""
+    />
+    <img
+      src=""
+    />
+    <img
+      src=""
+    />
+  </div>
 </div>
 `;
