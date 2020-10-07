@@ -41,5 +41,5 @@ Because its fun and great learning on how the things are handled behind scenes b
 3. [lint-staged](https://github.com/okonet/lint-staged#readme) - for linting staged files before each commit [:heavy_check_mark:]
 4. [Normamise.css](https://necolas.github.io/normalize.css/) - for resetting browser default css [:heavy_check_mark:]
 5. [CSS grid](https://developer.mozilla.org/en-US/docs/Web/CSS/grid) - for layouting [TO DO]
-6. [dotenv][https://www.npmjs.com/package/dotenv] - for environment secrets [TO DO]
+6. [dotenv](https://www.npmjs.com/package/dotenv) - for environment secrets [TO DO]
 7. [Travis CI](https://travis-ci.org/) - for ci/cd automated deployment [TO DO]
