@@ -2,9 +2,9 @@
 import { css, jsx } from '@emotion/core';
 import PropTypes from 'prop-types';
 import React from 'react';
-import phoneImg from '../public/assets/icons/phone-receiver.png';
-import bigImg from '../public/assets//images/xps-DYAf-8UTFN8-unsplash.jpg';
-import anotherBigImg from '../public/assets//images/xps-DYAf-8UTFN8-unsplash.jpeg';
+import phoneImg from '../../public/assets/icons/phone-receiver.png';
+import bigImg from '../../public/assets//images/xps-DYAf-8UTFN8-unsplash.jpg';
+import anotherBigImg from '../../public/assets//images/xps-DYAf-8UTFN8-unsplash.jpeg';
 export interface AppProps {
   name: string;
 }
