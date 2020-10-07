@@ -44,7 +44,7 @@ module.exports = {
                 sourcemap: true,
                 autoLabel: true,
                 labelFormat: "[local]",
-                autoInject: true,
+                autoInject: false,
               }),
             ],
           }),
